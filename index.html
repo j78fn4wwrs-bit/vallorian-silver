@@ -14,7 +14,8 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><a href="#top" class="brand" aria-label="Vallorian Silver home"><img src="assets/mark.webp" alt="" width="40" height="40"><img src="assets/wordmark.svg" alt="Vallorian Silver" class="wm" height="22"></a>
-<nav aria-label="Main"><a href="#catalog">The Collection</a><a href="#reviews">Reviews</a><a href="#shop">Shop</a></nav></header>
+<div class="navwrap"><nav aria-label="Main"><a href="#catalog">The Collection</a><a href="#reviews">Reviews</a><a href="#shop">Shop</a></nav><button type="button" class="music" id="music" aria-pressed="false" aria-label="Play soundtrack"><span class="ico" aria-hidden="true">&#9834;</span><span class="lbl">Play music</span></button></div></header>
+<audio id="soundtrack" src="assets/soundtrack.mp3" loop preload="none"></audio>
 <main id="main">
 <section class="hero" id="top">
   <img src="assets/logo.webp" alt="Vallorian Silver logo" width="900" height="900" class="logo">
@@ -29,11 +30,11 @@
   <p>Today we keep that search going. Every piece here is hand-picked estate and pre-loved sterling silver, chosen for its stones: tanzanite, topaz, garnet and the blues, purples, greens and embers of the four houses. Each one is photographed and described just as it is, and each comes with a little of its own legend.</p>
   </div>
   <ol class="story" aria-label="The legend of Valloria">
-    <li><figure><img src="assets/story-1.webp" srcset="assets/story-1-640.webp 640w, assets/story-1.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="A night sky over mountains and a river, with red, blue and green falling stars" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">The old crown breaks</span>Its light scatters across Valloria.</figcaption></figure></li>
-    <li><figure><img src="assets/story-2.webp" srcset="assets/story-2-640.webp 640w, assets/story-2.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="Muddy hands lifting a rough blue stone from a shallow stream" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">Dug up by hand</span>Stone by stone, it is found again.</figcaption></figure></li>
-    <li><figure><img src="assets/story-3.webp" srcset="assets/story-3-640.webp 640w, assets/story-3.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="A woman standing waist-deep in a still lake under a full moon, lowering two stones into the water" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">Moonlight</span>Set by the master jewelers of Argenmere…</figcaption></figure></li>
-    <li><figure><img src="assets/story-4.webp" srcset="assets/story-4-640.webp 640w, assets/story-4.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="A lump of silver glowing on red-hot coals in an iron brazier inside a dark cave" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">Fire</span>…with fire…</figcaption></figure></li>
-    <li><figure><img src="assets/story-5.webp" srcset="assets/story-5-640.webp 640w, assets/story-5.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="Tongs plunging a glowing piece of metal into a stone basin of water, sending up steam" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">Water</span>…and water.</figcaption></figure></li>
+    <li><figure><img src="assets/story-1.webp" srcset="assets/story-1-640.webp 640w, assets/story-1.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="A night sky over mountains and a river, with red, blue and green falling stars" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">The Crown Breaks</span>Its light scatters across Valloria.</figcaption></figure></li>
+    <li><figure><img src="assets/story-2.webp" srcset="assets/story-2-640.webp 640w, assets/story-2.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="Muddy hands lifting a rough blue stone from a shallow stream" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">Found by Hand</span>Stone by stone, the light is gathered again.</figcaption></figure></li>
+    <li><figure><img src="assets/story-3.webp" srcset="assets/story-3-640.webp 640w, assets/story-3.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="A woman standing waist-deep in a still lake under a full moon, lowering two stones into the water" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">Moonlight</span>The master jewelers of Argenmere begin by moonlight,</figcaption></figure></li>
+    <li><figure><img src="assets/story-4.webp" srcset="assets/story-4-640.webp 640w, assets/story-4.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="A lump of silver glowing on red-hot coals in an iron brazier inside a dark cave" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">Fire</span>shape the silver in fire,</figcaption></figure></li>
+    <li><figure><img src="assets/story-5.webp" srcset="assets/story-5-640.webp 640w, assets/story-5.webp 1280w" sizes="(max-width:700px) 90vw, 33vw" alt="Tongs plunging a glowing piece of metal into a stone basin of water, sending up steam" width="1280" height="715" loading="lazy" decoding="async"><figcaption><span class="st">Water</span>and finish it in water.</figcaption></figure></li>
   </ol>
   <p class="c"><span class="check"><a class="btn" href="https://valloriansilver.etsy.com" rel="noopener">Shop the collection on Etsy</a></span></p>
   <ul class="grid" id="grid" aria-live="polite"></ul>
@@ -57,5 +58,10 @@
 </main>
 <footer class="foot"><img src="assets/mark.webp" alt="" width="48" height="48"><p class="eyebrow">Jewels of Valloria</p><p>© 2026 Vallorian Silver</p><p class="small">Etsy is a trademark of Etsy, Inc.</p></footer>
 <script src="catalog.js" defer></script>
+<script>
+(function(){var b=document.getElementById('music'),a=document.getElementById('soundtrack');if(!b||!a)return;a.volume=0;var f;
+function fade(to){clearInterval(f);f=setInterval(function(){var v=a.volume+(to>a.volume?.05:-.05);if((to>a.volume&&v>=to)||(to<=a.volume&&v<=to)){v=to;clearInterval(f);if(to===0)a.pause();}a.volume=Math.max(0,Math.min(1,v));},60);}
+b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')==='true';if(on){fade(0);b.setAttribute('aria-pressed','false');b.setAttribute('aria-label','Play soundtrack');b.querySelector('.lbl').textContent='Play music';}else{a.play().then(function(){fade(.5);}).catch(function(){});b.setAttribute('aria-pressed','true');b.setAttribute('aria-label','Pause soundtrack');b.querySelector('.lbl').textContent='Pause music';}});})();
+</script>
 </body>
 </html>
