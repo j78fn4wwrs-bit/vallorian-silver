@@ -38,11 +38,14 @@ h2{color:var(--hi);text-align:center;font-weight:400;font-size:clamp(1.6rem,4vw,
 .story li{grid-column:span 3}.story li:nth-child(1){grid-column:1/-1}.story li:nth-child(1) img{aspect-ratio:21/9}
 .story figure{margin:0;position:relative;overflow:hidden;border-radius:6px;border:1px solid #2a2a30;background:#000}
 .story img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block;opacity:.92;transition:transform .8s ease,opacity .8s}
-.story figure:hover img{transform:scale(1.03);opacity:1}
-.story figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1rem .8rem;background:linear-gradient(transparent,rgba(5,5,8,.75) 40%,rgba(5,5,8,.95));text-shadow:0 1px 3px #000;color:var(--silver);font-style:italic;font-size:1.05rem}
+.story figure:hover img,.story figure:hover .story-vid{transform:scale(1.03)}.story figure:hover img{opacity:1}
+.story figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:2.4rem 1rem .8rem;background:linear-gradient(transparent,rgba(5,5,8,.75) 40%,rgba(5,5,8,.95));text-shadow:0 1px 3px #000;color:var(--silver);font-style:italic;font-size:1.05rem}
 .story .st{display:block;font:400 .85rem Marcellus,serif;font-style:normal;letter-spacing:.25em;text-transform:uppercase;color:var(--tz2);margin-bottom:.2rem}
 @media(max-width:700px){.story{grid-template-columns:1fr}.story li,.story li:nth-child(n){grid-column:auto}}
-@media(prefers-reduced-motion:reduce){.story img{transition:none}}
+.story .story-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border:0;opacity:0;z-index:1;pointer-events:none;transition:opacity .45s ease,transform .8s ease}
+.story .story-vid.is-on{opacity:1}
+.story figure:focus-visible{outline:2px solid var(--tz2);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.story img,.story .story-vid{transition:none}.story figure:hover img,.story figure:hover .story-vid{transform:none}}
 
 .navwrap{display:flex;align-items:center;gap:1rem}
 .music{display:inline-flex;align-items:center;gap:.4rem;background:transparent;color:#f5c518;border:1px solid #f5c518;border-radius:999px;padding:.35rem .8rem;font:inherit;font-size:.85rem;cursor:pointer}
